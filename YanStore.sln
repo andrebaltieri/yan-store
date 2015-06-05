@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanStore.Domain", "YanStore.Domain\YanStore.Domain.csproj", "{BB80A8D6-9185-4778-B642-B226310A71BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanStore.SharedKernel", "YanStore.SharedKernel\YanStore.SharedKernel.csproj", "{1E23BAD4-3426-4D46-99CB-C621B2F6E342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanStore.Infra", "YanStore.Infra\YanStore.Infra.csproj", "{E78386EE-D48A-4748-BE4A-AECBE63A74E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanStore.CrossCutting", "YanStore.CrossCutting\YanStore.CrossCutting.csproj", "{2FE7437C-F980-42F2-BD73-030F6C39AC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanStore.Api", "YanStore.Api\YanStore.Api.csproj", "{0302136E-E352-4056-A1EB-5576B0BFBE36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB80A8D6-9185-4778-B642-B226310A71BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB80A8D6-9185-4778-B642-B226310A71BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB80A8D6-9185-4778-B642-B226310A71BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB80A8D6-9185-4778-B642-B226310A71BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E23BAD4-3426-4D46-99CB-C621B2F6E342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E23BAD4-3426-4D46-99CB-C621B2F6E342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E23BAD4-3426-4D46-99CB-C621B2F6E342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E23BAD4-3426-4D46-99CB-C621B2F6E342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E78386EE-D48A-4748-BE4A-AECBE63A74E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78386EE-D48A-4748-BE4A-AECBE63A74E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78386EE-D48A-4748-BE4A-AECBE63A74E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78386EE-D48A-4748-BE4A-AECBE63A74E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE7437C-F980-42F2-BD73-030F6C39AC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE7437C-F980-42F2-BD73-030F6C39AC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE7437C-F980-42F2-BD73-030F6C39AC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE7437C-F980-42F2-BD73-030F6C39AC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0302136E-E352-4056-A1EB-5576B0BFBE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0302136E-E352-4056-A1EB-5576B0BFBE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0302136E-E352-4056-A1EB-5576B0BFBE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0302136E-E352-4056-A1EB-5576B0BFBE36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
