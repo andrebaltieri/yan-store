@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using YanStore.Domain.Model;
+using YanStore.Infra.Mapping;
 
 namespace YanStore.Infra.Context
 {
@@ -10,5 +11,10 @@ namespace YanStore.Infra.Context
         { }
 
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new UserMap());
+        }
     }
 }

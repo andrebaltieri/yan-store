@@ -6,5 +6,6 @@ namespace YanStore.Domain.Application
     public interface IUserApplicationService
     {
         User Register(RegisterUserCommand command);
+        bool Authenticate(string username, string password);
     }
 }

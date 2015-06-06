@@ -19,10 +19,10 @@ namespace YanStore.Api
             var container = new UnityContainer();
             var resolver = new DependencyResolver();
             var di = new UnityResolverHelper(container);
-
+            
             resolver.Resolve(container);
             config.DependencyResolver = di;
-            DomainEvents.Container = di;
+            DomainEvents.Container = new DomainEventsContainer(di);
 
             ConfigureWebApi(config);
 

@@ -10,8 +10,12 @@
             {
                 if (Container != null)
                 {
-                    foreach (var handler in Container.GetServices(typeof(IHandle<T>)))
-                        ((IHandle<T>)handler).Handle(args);
+                    // TODO>: Melhorar
+                    //foreach (var handler in Container.GetServices(typeof(IHandle<T>)))
+                    //{
+                        var obj = Container.GetService(typeof(IHandle<T>));
+                        ((IHandle<T>)obj).Handle(args);
+                    //}                    
                 }
             }
             catch

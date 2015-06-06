@@ -29,5 +29,11 @@ namespace YanStore.Domain.Application
 
             return null;
         }
+
+        public bool Authenticate(string username, string password)
+        {
+            _repository.Authenticate(username, password);
+            return true;
+        }
     }
 }

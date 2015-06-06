@@ -2,11 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Http.Dependencies;
-using YanStore.SharedKernel.Model;
 
 namespace YanStore.Api.Helpers
 {
-    public class UnityResolverHelper : IDependencyResolver, IContainer
+    public class UnityResolverHelper : IDependencyResolver
     {
         protected IUnityContainer container;
 

@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 using YanStore.Domain.Model;
 using YanStore.Domain.Model.Repository;
 using YanStore.Domain.Model.Specs;
@@ -23,12 +25,9 @@ namespace YanStore.Infra.Repositories
 
         public User Authenticate(string username, string password)
         {
-            var query = UserSpecs.AuthenticateUser(username, password);
-            query += UserSpecs.IsActive();
-
-            var user = _db.Users.Where(query).FirstOrDefault();
-
-            return user;
+            return _db.Users
+                .Where(UserSpecs.AuthenticateUser(username, password))
+                .Where(UserSpecs.IsActive()).FirstOrDefault();
         }
     }
 }

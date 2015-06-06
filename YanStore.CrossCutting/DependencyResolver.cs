@@ -18,7 +18,7 @@ namespace YanStore.CrossCutting
             container.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IUserApplicationService, UserApplicationService>(new HierarchicalLifetimeManager());
             container.RegisterType<IHandle<DomainNotification>, DomainNotificationHandle>(new HierarchicalLifetimeManager());
-            container.RegisterType<IHandle<UserRegistered>, UserRegisteredHandle>(new HierarchicalLifetimeManager());
+            container.RegisterType<IHandle<UserRegistered>, UserRegisteredHandle>();
         }
     }
 }

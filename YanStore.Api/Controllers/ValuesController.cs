@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using YanStore.Domain.Application;
 using YanStore.Domain.Application.Commands;
+using YanStore.Domain.Model.Event;
 using YanStore.SharedKernel.Model;
 using YanStore.SharedKernel.Model.Event;
 
@@ -13,11 +14,13 @@ namespace YanStore.Api.Controllers
     {
         private readonly IUserApplicationService _service;
         private readonly IHandle<DomainNotification> _notification;
+        private readonly IHandle<UserRegistered> _userNotification;
 
-        public ValuesController(IUserApplicationService service, IHandle<DomainNotification> notification)
+        public ValuesController(IUserApplicationService service, IHandle<DomainNotification> notification, IHandle<UserRegistered> userNotification)
         {
             this._service = service;
             this._notification = notification;
+            this._userNotification = userNotification;
         }
 
         [HttpPost]
@@ -35,6 +38,7 @@ namespace YanStore.Api.Controllers
             );
 
             _service.Register(command);
+            _service.Authenticate("andrebaltieri", "123456");
 
             if (_notification.HasNotifications())
             {
