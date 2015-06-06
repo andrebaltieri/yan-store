@@ -14,13 +14,11 @@ namespace YanStore.Api.Controllers
     {
         private readonly IUserApplicationService _service;
         private readonly IHandle<DomainNotification> _notification;
-        private readonly IHandle<UserRegistered> _userNotification;
 
-        public ValuesController(IUserApplicationService service, IHandle<DomainNotification> notification, IHandle<UserRegistered> userNotification)
+        public ValuesController(IUserApplicationService service)
         {
             this._service = service;
-            this._notification = notification;
-            this._userNotification = userNotification;
+            this._notification = DomainEvents.Container.GetService<IHandle<DomainNotification>>();
         }
 
         [HttpPost]

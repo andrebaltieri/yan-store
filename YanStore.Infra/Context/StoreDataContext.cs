@@ -7,7 +7,7 @@ namespace YanStore.Infra.Context
     public class StoreDataContext : DbContext
     {
         public StoreDataContext()
-            : base("CnnStr")
+            //: base("CnnStr")
         { }
 
         public DbSet<User> Users { get; set; }

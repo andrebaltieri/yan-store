@@ -9,6 +9,8 @@ namespace YanStore.Infra.Mapping
         {
             ToTable("User");
 
+            Ignore(x => x.Password);
+
             HasKey(x => x.Id);
             Property(x => x.Username).IsRequired();
             Property(x => x.Password).IsRequired();
